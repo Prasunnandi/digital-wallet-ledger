@@ -1,0 +1,14 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: digital-wallet-ledger
+
+ledger:
+  concurrency:
+    lock-mode: PESSIMISTIC_WRITE
+    lock-timeout-ms: 3000
+  invariant:
+    enforce-positive-balance: true
+    audit-double-entry-sum: true
